@@ -1,0 +1,51 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  
+  "modules-left": [
+    "niri/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "bluetooth",
+    "tray"
+  ],
+
+  "clock": {
+    "format": "{:%H:%M:%S}",
+    "interval": 1
+  },
+
+  "tray": {
+    "icon-size": 25,
+    "spacing": 8,
+    "show-passive-items": true
+  },
+
+  "pulseaudio": {
+    "on-click": "pavucontrol",
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "speaker": "",
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    }
+  },
+
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": " off",
+    "format-connected": " {num_connections}",
+    "on-click": "blueman-manager"
+  }
+}

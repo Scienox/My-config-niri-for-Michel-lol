@@ -1,0 +1,74 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+/* On regroupe tes modules pour unifier le style Glass */
+#workspaces, #tray, #pulseaudio, #bluetooth {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    /* Couleur sombre très translucide */
+    background-color: rgba(10, 10, 15, 0.4); 
+    /* Bordure fine et claire pour l'effet "tranchant" du verre */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2px 10px;
+    color: #ffffff;
+    /* Ombre légère pour décoller du fond */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#workspaces:hover {
+    border: 1px solid rgba(255, 255, 255, 0.4); /* La bordure devient plus blanche et visible */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Ajoute un léger halo lumineux autour du bloc */
+    transition: all 0.2s ease-in-out; /* Optionnel : rend le changement fluide et doux */
+}
+
+/* On garde l'illumination discrète du bouton à l'intérieur */
+#workspaces button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);    
+    border-radius: 6px;
+    color: #ffffff;
+    outline: none;
+    box-shadow: none;
+}
+
+#workspaces button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#clock {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    margin-right: 5px; /* Petit espace par rapport au bord */
+    background-color: rgba(10, 10, 15, 0.4); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2px 15px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#workspaces {
+    margin-left: 15px;
+}
+
+#workspaces button {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0 5px;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+#tray {
+    margin-right: 15px;
+}
